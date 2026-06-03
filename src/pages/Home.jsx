@@ -1,3 +1,6 @@
+import { homeServices } from "../data/services";
+import Footer from "./Footer";
+
 const Home = () => {
   return (
     <div className="p-8">
@@ -25,14 +28,15 @@ const Home = () => {
         <h2 className="text-2xl font-bold mb-6">Our Services</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {["Consultation", "Diagnostics", "Emergency"].map((item) => (
-            <div key={item} className="p-6 shadow rounded-xl">
-              <h3 className="font-bold">{item}</h3>
-              <p className="text-gray-500">High quality care service</p>
+          {homeServices.map(({ id, title, description }) => (
+            <div key={id} className="p-6 shadow rounded-xl">
+              <h3 className="font-bold">{title}</h3>
+              <p className="text-gray-500">{description}</p>
             </div>
           ))}
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };

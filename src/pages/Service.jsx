@@ -1,3 +1,5 @@
+import Footer from "./Footer";
+
 const Service = () => {
   const services = [
     "General Consultation",
@@ -7,6 +9,7 @@ const Service = () => {
   ];
 
   return (
+    <>
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-6">Services</h1>
 
@@ -18,6 +21,8 @@ const Service = () => {
         ))}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

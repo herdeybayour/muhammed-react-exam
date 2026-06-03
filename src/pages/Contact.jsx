@@ -1,5 +1,8 @@
+import Footer from "./Footer";
+
 const Contact = () => {
   return (
+    <>
     <div className="p-8 max-w-xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
 
@@ -23,7 +26,10 @@ const Contact = () => {
           Send Message
         </button>
       </form>
+      
     </div>
+    <Footer/>
+    </>
   );
 };
 
